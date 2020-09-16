@@ -1,0 +1,12 @@
+import { APIGatewayProxyHandler } from "aws-lambda";
+
+const helloWorld: APIGatewayProxyHandler = async (event, _context, callback) => {
+  return {
+    statusCode: 200,
+    body: JSON.stringify({
+      message: 'Hello from Serverless!',
+      input: event,
+    }, null, 2),
+  };
+};
+export const handler = helloWorld;

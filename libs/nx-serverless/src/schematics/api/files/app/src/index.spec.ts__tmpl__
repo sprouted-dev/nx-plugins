@@ -1,0 +1,13 @@
+import { handler } from './index';
+import { APIGatewayProxyEvent } from 'aws-lambda'
+
+describe('hello', () => {
+
+  it('should say hello', async () => {
+    const event = {} as APIGatewayProxyEvent;
+    const resp = await handler(event, null, null);
+    const msg = JSON.parse(resp['body']);
+    expect(msg.message).toMatch(/Hello/);
+  });
+
+})
