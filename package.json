@@ -11,8 +11,6 @@
     "url": "ssh://git@github.com/flowaccount/nx-plugins.git"
   },
   "scripts": {
-    "commit": "git-cz",
-    "checkcommit": "node ./scripts/commit-lint.js",
     "nx": "nx",
     "start": "nx serve",
     "build": "nx build",
